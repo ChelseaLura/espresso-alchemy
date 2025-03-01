@@ -10,20 +10,38 @@ const VerticalRule = styled.div`
   flex-shrink: 0;
 `;
 
-const Container = styled.div`
+const EvenSplitContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   gap: var(--gap-medium);
   padding: var(--gap-medium);
 `;
 
-const SideBySideDisplay = () => {
+const UnevenSplitContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: var(--gap-medium);
+  padding: var(--gap-medium);
+  width: 100%;
+`;
+
+const EvenSplitDisplay = () => {
   return (
-    <>
+    <EvenSplitContainer>
       <DrinkInfographic />
       <VerticalRule />
       <DrinkDetails />
-    </>
+    </EvenSplitContainer>
+  );
+};
+
+const UnevenSplitDisplay = () => {
+  return (
+    <UnevenSplitContainer>
+      <DrinkInfographic />
+      <VerticalRule />
+      <DrinkDetails />
+    </UnevenSplitContainer>
   );
 };
 
@@ -31,9 +49,9 @@ export const DrinkDisplay = () => {
   return (
     <>
       <hr></hr>
-      <Container>
-        <SideBySideDisplay />
-      </Container>
+      <EvenSplitDisplay />
+      <hr></hr>
+      <UnevenSplitDisplay />
       <hr></hr>
     </>
   );
