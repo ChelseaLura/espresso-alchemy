@@ -1,68 +1,85 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --cafe-black: #2b1b11;
+
+  --cafe-soft-parchment: #feddba;
+  --cafe-soft-parchment-dark: ##fece9a;
+  --cafe-espresso-brown: #5f3c26;
+  --cafe-coffee-brown: #120902;
+  --cafe-milky-white: #faf6ed;
+  --cafe-accent-color: #2a5c59;
+  --cafe-water-color: #327cb8;
+
+  --color-background: var(--cafe-soft-parchment);
+  --color-background-darken: var(--cafe-soft-parchment-dark);
+
+  --color-border: var(--cafe-black);
+  --color-accent-border: var(--cafe-accent-color);
+
+  --color-text: var(var(--cafe-black));
+  --color-text-light: var(--cafe-milky-white);
+
+  --border-radius: 3px;
+
+  --gap-small: 10px;
+  --gap-medium: 20px;
+  --gap-large: 50px;
+
+  --drink-width: 400px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+/* TODO: find a better free font */
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
   line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-synthesis: none;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+#root {
+  height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  color: var(--cafe-text-dark-2);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: var(--gap-large);
+
+  @media (max-width: 600px) {
+    margin-bottom: var(--gap-medium);
+  }
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--cafe-text-dark);
+  margin-bottom: var(--gap-medium);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+p {
+  font-size: 1.125rem;
+  color: var(--cafe-text-dark);
+  margin-bottom: var(--gap-small);
+}
+
+hr {
+  height: 3px;
+  color: var(--cafe-black);
+  background-color: var(--cafe-black);
+  margin: var(--gap-small) 0;
 }
