@@ -10,7 +10,7 @@ const DrinkDetailContainer = styled.div`
 export const DrinkDetails = () => {
   return (
     <DrinkDetailContainer>
-      <h1>Americano</h1>
+      <h1>AMERICANO</h1>
       <p>
         Grounds, cream kopi-luwak, latte froth cinnamon body coffee extra ,
         aroma, frappuccino, extra coffee, strong medium aromatic, iced, affogato
@@ -18,8 +18,7 @@ export const DrinkDetails = () => {
         filter cup, eu, turkish, trifecta that, carajillo wings con panna fair
         trade single origin to go. Affogato pumpkin spice kopi-luwak barista
         skinny so saucer extraction caramelization medium that froth frappuccino
-        cup seasonal wings. Mug, extra , at dripper coffee wings single shot,
-        chicory and fair trade to go instant redeye cappuccino.
+        cup seasonal wings.
       </p>
     </DrinkDetailContainer>
   );

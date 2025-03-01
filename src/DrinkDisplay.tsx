@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { DrinkInfographic } from "./drinkComponents/DrinkInfographic";
-import { DrinkDetails } from "./drinkComponents/DrinkDetails";
+import { DrinkInfographic } from "./components/DrinkInfographic";
+import { DrinkDetails } from "./components/DrinkDetails";
 
 const VerticalRule = styled.div`
   min-height: 100%;
@@ -8,16 +8,10 @@ const VerticalRule = styled.div`
   color: var(--cafe-black);
   background-color: var(--cafe-black);
   flex-shrink: 0;
+  margin: 0 var(--gap-medium);
 `;
 
-const EvenSplitContainer = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  gap: var(--gap-medium);
-  padding: var(--gap-medium);
-`;
-
-const UnevenSplitContainer = styled.div`
+const Container = styled.div`
   display: flex;
   justify-content: space-between;
   gap: var(--gap-medium);
@@ -25,33 +19,32 @@ const UnevenSplitContainer = styled.div`
   width: 100%;
 `;
 
-const EvenSplitDisplay = () => {
-  return (
-    <EvenSplitContainer>
-      <DrinkInfographic />
-      <VerticalRule />
-      <DrinkDetails />
-    </EvenSplitContainer>
-  );
-};
+const MainDisplay = styled.div`
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
-const UnevenSplitDisplay = () => {
-  return (
-    <UnevenSplitContainer>
-      <DrinkInfographic />
-      <VerticalRule />
-      <DrinkDetails />
-    </UnevenSplitContainer>
-  );
-};
+const SideDisplay = styled.div`
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+`;
 
 export const DrinkDisplay = () => {
   return (
     <>
       <hr></hr>
-      <EvenSplitDisplay />
-      <hr></hr>
-      <UnevenSplitDisplay />
+      <Container>
+        <MainDisplay>
+          <DrinkInfographic />
+        </MainDisplay>
+        <SideDisplay>
+          <VerticalRule />
+          <DrinkDetails />
+        </SideDisplay>
+      </Container>
       <hr></hr>
     </>
   );

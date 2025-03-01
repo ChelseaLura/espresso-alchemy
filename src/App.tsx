@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { DrinkDisplay } from "./DrinkDisplay";
+import { Header } from "./Header";
+import { Recipe } from "./components/Recipe";
 
 const AppContainer = styled.div`
   max-width: 1280px;
@@ -14,7 +16,9 @@ const AppContainer = styled.div`
 function App() {
   return (
     <AppContainer>
+      <Header />
       <DrinkDisplay />
+      <Recipe />
     </AppContainer>
   );
 }

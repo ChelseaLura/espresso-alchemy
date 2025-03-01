@@ -44,9 +44,9 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 400;
-  font-synthesis: none;
 }
 
 #root {
@@ -54,9 +54,8 @@ body {
 }
 
 h1 {
-  color: var(--cafe-text-dark-2);
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 3.5rem;
+  font-weight: 700;
   margin-bottom: var(--gap-large);
 
   @media (max-width: 600px) {
@@ -64,22 +63,25 @@ h1 {
   }
 }
 
-h3 {
-  font-size: 1.25rem;
+h2 {
+  font-size: 1.75rem;
   font-weight: 600;
-  color: var(--cafe-text-dark);
+  margin-bottom: var(--gap-medium);
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
   margin-bottom: var(--gap-medium);
 }
 
 p {
   font-size: 1.125rem;
-  color: var(--cafe-text-dark);
   margin-bottom: var(--gap-small);
 }
 
 hr {
   height: 3px;
-  color: var(--cafe-black);
   background-color: var(--cafe-black);
   margin: var(--gap-small) 0;
 }
